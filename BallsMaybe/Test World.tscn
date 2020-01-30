@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://RigidBody2D.tscn" type="PackedScene" id=2]
+
+[node name="Test World" type="Node2D"]
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+position = Vector2( 514, 676 )
+
+[node name="Floor2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 955, 382 )
+scale = Vector2( -3.85058, 3.1637 )
+
+[node name="Ball" parent="." instance=ExtResource( 2 )]
+
+[node name="Camera2D" type="Camera2D" parent="Ball"]
+current = true
+zoom = Vector2( 2, 2 )
